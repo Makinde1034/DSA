@@ -23,3 +23,21 @@
 
 
     }
+    
+### Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+
+    You must implement a solution with a linear runtime complexity and use only constant extra space.
+    
+    function singleNumber(s: number[]): number {
+        let ans = []
+        for(let i = 0; i < s.length; i++){
+            for(let j = i + 1; j < s.length; j++){
+                if(s[j] === s[i]){
+                ans.push(s[i])
+              }
+            }
+        }
+
+      const res = s.filter(x => !ans.includes(x));
+      return  Number(res.join()) 
+    };
