@@ -54,23 +54,23 @@
     For the purpose of this problem, we will return 0 when needle is an empty string. This is consistent to C's strstr() and Java's indexOf().
     
     
-    ### solution
-    function strStr(haystack: string, needle: string): number {
-    	const index = haystack.indexOf(needle)
-  
- 	    return index
+### solution
+function strStr(haystack: string, needle: string): number {
+    const index = haystack.indexOf(needle)
 
+    return index
+
+};
+    
+    
+### Given a string s consisting of some words separated by some number of spaces, return the length of the last word in the string.
+
+    A word is a maximal substring consisting of non-space characters only.
+
+    var lengthOfLastWord = function(word) {
+        const sw = word.split(" ")
+        const fil = sw.filter((i => i !== ""));
+        const lastWord = fil[fil.length - 1].length;
+
+        return lastWord; 
     };
-    
-    
-    ### Given a string s consisting of some words separated by some number of spaces, return the length of the last word in the string.
-
-        A word is a maximal substring consisting of non-space characters only.
-        
-        var lengthOfLastWord = function(word) {
-            const sw = word.split(" ")
-            const fil = sw.filter((i => i !== ""));
-            const lastWord = fil[fil.length - 1].length;
-
-            return lastWord; 
-        };
