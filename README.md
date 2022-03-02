@@ -54,12 +54,12 @@
     For the purpose of this problem, we will return 0 when needle is an empty string. This is consistent to C's strstr() and Java's indexOf().
     
     
-function strStr(haystack: string, needle: string): number {
-    const index = haystack.indexOf(needle)
+    function strStr(haystack: string, needle: string): number {
+        const index = haystack.indexOf(needle)
 
-    return index
+        return index
 
-};
+    };
     
     
 ### 4. Given a string s consisting of some words separated by some number of spaces, return the length of the last word in the string.
