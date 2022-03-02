@@ -54,7 +54,7 @@
     For the purpose of this problem, we will return 0 when needle is an empty string. This is consistent to C's strstr() and Java's indexOf().
     
     
-    ## solution
+    ### solution
     function strStr(haystack: string, needle: string): number {
     	const index = haystack.indexOf(needle)
   
