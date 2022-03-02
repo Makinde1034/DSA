@@ -1,6 +1,6 @@
 # DSA
 
-###  Given an integer x, return true if x is palindrome integer.
+### 1.  Given an integer x, return true if x is palindrome integer.
 
     An integer is a palindrome when it reads the same backward as forward.
 
@@ -24,7 +24,7 @@
 
     }
     
-### Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+### 2. Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
 
     You must implement a solution with a linear runtime complexity and use only constant extra space.
     
@@ -43,7 +43,7 @@
     };
     
     
-### Implement strStr().
+### 3. Implement strStr().
 
     Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
 
@@ -54,7 +54,7 @@
     For the purpose of this problem, we will return 0 when needle is an empty string. This is consistent to C's strstr() and Java's indexOf().
     
     
-### solution
+### 4. solution
 function strStr(haystack: string, needle: string): number {
     const index = haystack.indexOf(needle)
 
@@ -63,7 +63,7 @@ function strStr(haystack: string, needle: string): number {
 };
     
     
-### Given a string s consisting of some words separated by some number of spaces, return the length of the last word in the string.
+### 5. Given a string s consisting of some words separated by some number of spaces, return the length of the last word in the string.
 
     A word is a maximal substring consisting of non-space characters only.
 
