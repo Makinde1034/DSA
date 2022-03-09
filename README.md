@@ -73,3 +73,21 @@
 
         return lastWord; 
     };
+
+### 5. Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+
+    A subarray is a contiguous part of an array.
+    
+    var maxSubArray = function(nums) {
+    let currentNumber = 0;
+    let maxSum = -Infinity
+  
+  
+    for (let i = 0; i < nums.length; i++){
+      currentNumber = Math.max(nums[i], currentNumber + nums[i])
+          maxSum = Math.max(maxSum, currentNumber )
+    }
+    
+    return maxSum
+    
+    };
