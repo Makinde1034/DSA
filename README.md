@@ -97,17 +97,19 @@
         Given a string s, return true if it is a palindrome, or false otherwise.
        
        function isPalindrome(s: string): boolean {
-          const splitString = s.split("")
-          const checkAlphaNum = splitString.filter((i)=> i.match(/^[0-9a-zA-Z]+$/))
+       
+              const splitString = s.split("")
+              
+              const checkAlphaNum = splitString.filter((i)=> i.match(/^[0-9a-zA-Z]+$/))
 
-          const changeCase = checkAlphaNum.join("").toLowerCase()
+              const changeCase = checkAlphaNum.join("").toLowerCase()
 
-          const reverse = changeCase.split("").reverse().join("")
+              const reverse = changeCase.split("").reverse().join("")
 
-          if( reverse === changeCase ){
-            return true
-          }else{
-          return false
-          }
-    };
+              if( reverse === changeCase ){
+                return true
+              }else{
+                return false
+              }
+        };
  
