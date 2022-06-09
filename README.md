@@ -112,4 +112,17 @@
                 return false
               }
         };
+        
+### 7. Reverse integer
+    
+    const revNum = (num) => {
+      const res = parseInt(num.toString().split('').reverse().join(''))
+
+      if(num < 0){
+        return res * -1
+      }
+      return res
+    }
+        
+        
  
