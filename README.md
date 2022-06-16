@@ -163,6 +163,29 @@ capitalize('sHoRt AnD sToUt') --> 'Short And Stout'
       return split.join(" ")
     }
 
-        
+
+### 9. Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+    function isAnagram(s: string, t: string): boolean {
+        let letters = {}
+
+        if(s.length !== t.length){
+            return false
+        }
+        for (let i = 0; i < s.length; i++){
+            letters[s[i]] = letters[s[i]]+1 || 1
+        }
+
+        for (let i = 0; i < t.length; i++){
+            if(!letters[t[i]] ){
+                return false
+            }else{
+                letters[t[i]]--
+            }
+        }
+        return true
+    };
         
  
