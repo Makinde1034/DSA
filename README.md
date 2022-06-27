@@ -188,7 +188,7 @@ An Anagram is a word or phrase formed by rearranging the letters of a different 
         return true
     };
     
-    ### 10.  Write a function that accepts a positive number N. The function should console log a pyramid shape with N levels using the # character.  Make sure the
+### 10.  Write a function that accepts a positive number N. The function should console log a pyramid shape with N levels using the # character.  Make sure the
              pyramid has spaces on both the left and right side
              --- Examples
                pyramid(1)
