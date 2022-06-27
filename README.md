@@ -212,3 +212,36 @@ An Anagram is a word or phrase formed by rearranging the letters of a different 
             }
 
 
+### 11.  Write a function that returns the number of vowels found within a string. Vowel characters are 'a', 'e', 'i', 'o', and 'u'.
+Make sure the function is case insensitive!
+         --- Examples
+           vowels('What') --> 1
+          vowels('Why?') --> 0
+           vowels('aEiOu') --> 5
+          vowels('I am a world-class developer using iterations') --> 16
+        
+        
+            const vowels = {
+              "a" : "a",
+              "e" : "e",
+              "i" : "i",
+              "o" : "o",
+              "u" : "u"
+            }
+
+        const vowelsNum = (str) => {
+          let count = {}
+          let total = 0
+          for(let i=0; i < str.length; i++){
+
+            if(vowels[str[i].toLowerCase() ] == str[i].toLowerCase() ){
+              count[str[i]] = count[str[i]]+1 || 1
+
+            }
+          }
+
+          for(let x in count){
+            total += count[x]
+          }
+          console.log(total)
+        }
