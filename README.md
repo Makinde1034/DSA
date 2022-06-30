@@ -284,5 +284,32 @@ Make sure the function is case insensitive!
 
           console.log(arr)
         }
+        
+###  Create a function that when given 2 sorted arrays, it returns a new sorted array that contains both elements of input arrays
+ --- Examples merge([1,3], [2,4]) === [1,2,3,4] 
+ merge([1,5], [4,6,7]) === [1,4,5,6,7]
+ merge([4,6,7], [1,5]) === [1,4,5,6,7]
+ 
+ 
+     const mergeSortedArr = (arr1,arr2) => {
+      const newArr = arr1.concat(arr2)
+
+      for (let i = 0; i < newArr.length; i++){
+        for (let j = 0; j < newArr.length; j++){
+          if(newArr[j] > newArr[j + 1]){
+            let sve = newArr[j]
+            newArr[j] = newArr[j + 1]
+            newArr[j+1] = sve
+          }
+
+        }
+      }
+
+      return newArr
+
+
+    }
+
+
 
 
