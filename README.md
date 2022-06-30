@@ -245,3 +245,44 @@ Make sure the function is case insensitive!
           }
           console.log(total)
         }
+        
+### Sorting algorithms 
+
+    // sorting algorithm (Bubble sort)
+
+        const srt = (arr) => {
+
+          for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr.length; j++) {
+
+              if (arr[j] > arr[j + 1]) {
+                let temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = temp
+
+              }
+            }
+          }
+          console.log(arr)
+        }
+
+        //  sorting algorithm (Selection sort)
+
+        const sltSrt = (arr) => {
+          for (let i = 0; i < arr.length; i++) {
+            let swapIndex = i
+            for (let j = i + i; j < arr.length; j++) {
+              if (arr[j] < arr[swapIndex]) {
+                swapIndex = j
+
+              }
+            }
+            let sve = arr[swapIndex]
+            arr[i] = arr[swapIndex]
+            arr[i + 1] = sve
+          }
+
+          console.log(arr)
+        }
+
+
