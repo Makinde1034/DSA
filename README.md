@@ -285,7 +285,53 @@ Make sure the function is case insensitive!
           console.log(arr)
         }
         
-###  Create a function that when given 2 sorted arrays, it returns a new sorted array that contains both elements of input arrays
+### Linked List
+
+    class Node {
+      constructor(val, n) {
+        this.val = val
+        this.n = n
+      }
+    }
+
+    class LinkedList {
+      constructor() {
+        this.head = null
+        this.length = 0
+      }
+      unShift(data) {
+        const newNode = new Node(data, this.head)
+        this.head = newNode
+        this.length++
+      }
+
+      getFirst() {
+        return this.head
+      }
+
+      getLast() {
+        let currentNode = this.head
+        while (currentNode && currentNode.next) {
+          currentNode = currentNode.next
+
+
+        }
+        return currentNode
+      }
+
+      getLength(){
+        return this.length
+      }
+
+      clear(){
+        this.head = null
+        this.length = 0
+      }
+
+
+    }
+        
+### 12.  Create a function that when given 2 sorted arrays, it returns a new sorted array that contains both elements of input arrays
  --- Examples merge([1,3], [2,4]) === [1,2,3,4] 
  merge([1,5], [4,6,7]) === [1,4,5,6,7]
  merge([4,6,7], [1,5]) === [1,4,5,6,7]
