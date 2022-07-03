@@ -401,7 +401,22 @@ Make sure the function is case insensitive!
 
     }
 
+### 14. Given a string, return a new string with all spaces replaced with '%20'. 
 
+    const replaceString = (str) => {
+      let store = []
+      for (i in str) {
+        if (str[i] === " ") {
+          store.push("%20")
+        }
+        else {
+          store.push(str[i])
+        }
+      }
+
+      return res = store.join("")
+
+    }
 
 
 
