@@ -330,6 +330,22 @@ Make sure the function is case insensitive!
 
 
     }
+    
+### Queues
+
+    class Queue {
+      constructor(){
+        this.data = []
+      }
+
+      enQueue(val){
+        this.data.unshift(val)
+      }
+
+      deQueue(){
+        this.data.pop()
+      }
+    }
         
 ### 12.  Create a function that when given 2 sorted arrays, it returns a new sorted array that contains both elements of input arrays
  --- Examples merge([1,3], [2,4]) === [1,2,3,4] 
