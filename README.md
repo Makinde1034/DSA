@@ -371,6 +371,36 @@ Make sure the function is case insensitive!
 
 
     }
+    
+### 13. No duplicates. Given  a string, return true if every character appears once, and return false otherwise. Can you solve this without returning any additional    data structure. 
+
+    solution 1
+    
+    const noDuplicates = (str) => {
+      for (let i = 0; i < str.length; i++){
+        for (let j = i+1; j < str.length; j++){
+          if(str[i] === str[j]){
+            return false
+          }
+        }
+      }
+      return true
+    }
+    
+    solution 2
+    
+    const noDuplicates = (str) => {
+      const spt = str.split("").sort().join("")
+      for (let i = 0; i < spt.length; i++) {
+        if (spt[i] === spt[i + 1]) {
+          return false
+        }
+      }
+
+      return true
+
+    }
+
 
 
 
