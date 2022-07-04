@@ -418,5 +418,24 @@ Make sure the function is case insensitive!
 
     }
 
+### 15. Given an input string, write a function that returns a compressed string exactly as seen below. 
+        bbcdddddbbb -> 2bc1d5b3
+        If the compresses string is not smaller than the original string, return the original string.
+        
+        const compressString = (str) => {
+          let compressed = ""
+          let counter = 1
+          for (let i = 0; i < str.length; i++) {
+            if (str[i] === str[i + 1]) {
+              counter++
+            }else{
+              compressed = compressed + str[i] + counter.toString()
+              counter = 1
+            }
+          }
+
+          return compressed
+        }
+
 
 
