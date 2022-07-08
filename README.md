@@ -346,6 +346,44 @@ Make sure the function is case insensitive!
         this.data.pop()
       }
     }
+    
+### Implementing graphs
+
+    const nodes = ['a', 'b', 'c', 'd', 'e']
+
+    const edges = [
+      ['a', 'b'],
+      ['a', 'd'],
+      ['d', 'c'],
+      ['d', 'e'],
+      ['c', 'b'],
+      ['c', 'e']
+    ]
+
+    const findAdjacentNodes = (node) => {
+      let adjacents = []
+      for (let i = 0; i < edges.length; i++) {
+        const nodeIdx = edges[i].indexOf(node)
+        if (nodeIdx > -1) {
+          const adjacentNode = nodeIdx === 0 ? edges[i][1] : edges[i][0]
+          adjacents.push(adjacentNode)
+        }
+      }
+
+      return adjacents
+    }
+
+    const isConnected = (node1, node2) => {
+      for (let i = 0; i < edges.length; i++) {
+        if (edges[i].includes(node1) && edges[i].includes(node2)) {
+          return true
+        }
+      }
+
+      return false
+    }
+
+
         
 ### 12.  Create a function that when given 2 sorted arrays, it returns a new sorted array that contains both elements of input arrays
  --- Examples merge([1,3], [2,4]) === [1,2,3,4] 
