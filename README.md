@@ -474,6 +474,28 @@ Make sure the function is case insensitive!
 
           return compressed
         }
+        
+### 16. Given an array of sorted numbers and a target sum, find a pair in the array whose sum is equal to the given target. 
+
+        const findPair = (arr,p) => {
+          let leftCounter = 0,
+            rightCounter = arr.length - 1
+            let pair = null
+          while(leftCounter != rightCounter){
+            pairSum = arr[leftCounter]+arr[rightCounter]
+            if(pairSum === p){
+            pair = [ arr[leftCounter],arr[rightCounter]]
+            }
+            else if(pairSum < p){
+              leftCounter++
+            }else if(pairSum > p){
+              rightCounter--
+            }
+          }
+
+          return pair
+
+        }
 
 
 
