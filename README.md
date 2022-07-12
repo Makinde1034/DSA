@@ -475,7 +475,7 @@ Make sure the function is case insensitive!
           return compressed
         }
         
-### 16. Given an array of sorted numbers and a target sum, find a pair in the array whose sum is equal to the given target. 
+### 16. Given an array of sorted numbers and a target sum, find a pair in the array whose sum is equal to the given target. E.g array = [1,2,3,4,5] targetSum = 7. 
 
         const findPair = (arr,p) => {
           let leftCounter = 0,
