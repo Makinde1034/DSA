@@ -496,6 +496,33 @@ Make sure the function is case insensitive!
           return pair
 
         }
+        
+ ### Given an array of integers, return an array such that such that product[i] is equal to the product of all the elements of arr[i]. Solve without division operation in o(n) time complexity. 
+ 
+ 
+     `const productOfAllOtherNumbers = (arr) => {
+      let beforeProductsSoFar = 1
+      const productsOfBeforeNumbers = []
+      for (let i = 0; i < arr.length; i++) {
+        productsOfBeforeNumbers[i] = beforeProductsSoFar
+        beforeProductsSoFar *= arr[i]
+      }
+
+
+      let afterProductsSoFar = 1
+      const productsOfAfterNumbers = []
+      for(let j = arr.length - 1; j > -1; j--){
+        productsOfAfterNumbers[j] = afterProductsSoFar;
+        afterProductsSoFar *= arr[j]
+      }
+
+      const products = []
+      for (let k = 0; k < arr.length; k++){
+        products[k] = productsOfAfterNumbers[k] * productsOfBeforeNumbers[k]
+      }
+
+      return products
+    }`
 
 
 
