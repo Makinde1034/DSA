@@ -497,7 +497,7 @@ Make sure the function is case insensitive!
 
         }
         
- ### Given an array of integers, return an array such that such that product[i] is equal to the product of all the elements of arr[i]. Solve without division operation in o(n) time complexity. 
+ ### 17. Given an array of integers, return an array such that such that product[i] is equal to the product of all the elements of arr[i]. Solve without division operation in o(n) time complexity. 
  
  
      `const productOfAllOtherNumbers = (arr) => {
