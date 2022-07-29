@@ -523,6 +523,28 @@ Make sure the function is case insensitive!
 
       return products
     }`
+    
+### 18. Implementing binary search. 
+    
+    const binarySearch = (arr, targetValue) => {
+      let leftCounter = 0
+      let rightCounter = arr.length - 1
+
+      while (leftCounter <= rightCounter) {
+        let mid = Math.floor((leftCounter + rightCounter) / 2)
+
+        if (arr[mid] === targetValue) {
+          return arr[mid]
+        } else if (targetValue < arr[mid]) {
+          rightCounter = mid - 1
+        } else {
+          leftCounter = mid + 1
+        }
+
+      }
+      return false
+    }
+
 
 
 
