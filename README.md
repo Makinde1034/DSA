@@ -28,19 +28,19 @@
 
     You must implement a solution with a linear runtime complexity and use only constant extra space.
     
-    function singleNumber(s: number[]): number {
-        let ans = []
-        for(let i = 0; i < s.length; i++){
-            for(let j = i + 1; j < s.length; j++){
-                if(s[j] === s[i]){
-                ans.push(s[i])
-              }
-            }
-        }
+   const sol = (arr) => {
+      const obj = {}
+      for (let i = 0; i < arr.length; i++){
+        obj[arr[i]] = obj[arr[i]]+1 || 1
+      }
 
-      const res = s.filter(x => !ans.includes(x));
-      return  Number(res.join()) 
-    };
+      for(x in obj){
+
+        if(obj[x] === 1){
+         return x
+        }
+      }
+    } 
     
     
 ### 3. Implement strStr().
