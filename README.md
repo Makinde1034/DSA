@@ -544,6 +544,45 @@ Make sure the function is case insensitive!
       }
       return false
     }
+    
+### 19. /*
+    Task - recreate the browser’s native setInterval() function without using window.setInterval() itself
+
+     A) Create as a SetInterval prototype, that takes two constructor arguments:
+        1. "func", the function to be called at the intervals
+        2. "interval", the amount of time in milliseconds between each interval
+
+
+       B) Create "clear" method on SetInterval that will clear the intervals from running
+
+       Reference - https://www.w3schools.com/jsref/met_win_setinterval.asp
+    */
+
+    function SetInterval(func, interval) {
+      this.func = func
+      this.interval = interval
+      this.start()
+
+    }
+
+
+    SetInterval.prototype.start = function() {
+      this.timer = setTimeout(()=>{
+        this.func()
+        this.start()
+      },1000)
+    }
+
+    SetInterval.prototype.clear = function() {
+       clearInterval(this.timer)
+    }
+
+
+    /* Do not edit below this line and don’t create any additional functions */
+
+    var myInterval = new SetInterval(() => {console.log("Bryan!");}, 1000);
+    setTimeout(() => myInterval.clear(), 6000);
+
 
 
 
