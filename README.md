@@ -265,6 +265,26 @@ Make sure the function is case insensitive!
           }
           console.log(arr)
         }
+        
+<!--       Bubble sort with do-while   -->
+
+        const bubbleSort = (arr) => {
+          let swapped 
+          do{
+            swapped  = false
+              for(let j = 0 ;j < arr.length; j++ ){
+              if(arr[j] > arr[j + 1]){
+                let temp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = temp
+                swapped = true
+              }
+            }
+          }while(swapped)
+
+
+          return arr
+        }
 
         //  sorting algorithm (Selection sort)
 
