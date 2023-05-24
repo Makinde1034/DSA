@@ -603,7 +603,18 @@ Make sure the function is case insensitive!
     var myInterval = new SetInterval(() => {console.log("Bryan!");}, 1000);
     setTimeout(() => myInterval.clear(), 6000);
 
+### 18. Cartesian product.
 
+    const catersian = (a,b) => {
+      let res = []
+      for(let i = 0; i < a.length; i++) {
+        for(let j = 0; j < b.length; j++){
+          res.push([a[i],b[j]])
+        }
+      }
+
+      console.log(res)
+    }
 
 
 
