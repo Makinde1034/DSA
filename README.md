@@ -616,5 +616,23 @@ Make sure the function is case insensitive!
       console.log(res)
     }
 
+### 19. Fibonnaci sequence - 
+
+    1.
+    `const solution = (n) => {
+      let arr = []
+      for(let i = 0; i <= n - 1 ; i++){
+      	if( i == 0 || i == 1){
+        	arr.push(i)  
+        }else{
+        	arr.push(arr[i-1] + arr[i-2])
+          
+        }
+        
+      }
+      return arr
+    }`
+    
+
 
 
