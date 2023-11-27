@@ -643,7 +643,19 @@ Make sure the function is case insensitive!
           
           return arr
     }
+
+### 20 Factoria of a number
+    const factoria = (n) => {
+    	let a = 1
+    	for (let i = 1; i <= n; i++){
+      	if(i > 0){
+        	a *= i
+          
+        }
+      }
+      return a
     
+    }
 
 
 
