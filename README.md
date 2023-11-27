@@ -619,7 +619,7 @@ Make sure the function is case insensitive!
 ### 19. Fibonnaci sequence - 
 
     1.
-    `const solution = (n) => {
+    const solution = (n) => {
       let arr = []
       for(let i = 0; i <= n - 1 ; i++){
       	if( i == 0 || i == 1){
@@ -631,7 +631,18 @@ Make sure the function is case insensitive!
         
       }
       return arr
-    }`
+    }
+
+    2.
+    const finobacci = (n) => {
+    	let arr = [0,1]
+          for (let i = 2; i < n; i++ ){
+            arr[i] = arr[i - 1] + arr[ i - 2]
+            
+          }
+          
+          return arr
+    }
     
 
 
