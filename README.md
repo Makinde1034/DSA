@@ -670,5 +670,15 @@ Make sure the function is case insensitive!
       return true
     }
 
-
+### 22 Power of two
+    const powerOfTwo = (n)=> {
+	let a = 0
+      while( a < n){
+      	if( n == 2 ** a){
+        	return true
+        }
+        a++
+      }
+      return false
+    }
 
