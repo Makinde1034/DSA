@@ -671,6 +671,7 @@ Make sure the function is case insensitive!
     }
 
 ### 22 Power of two
+    solution 1 - 0(n)
     const powerOfTwo = (n)=> {
 	let a = 0
       while( a < n){
@@ -681,4 +682,19 @@ Make sure the function is case insensitive!
       }
       return false
     }
+
+    solution 2 - 0(logn)
+    const powerOfTwo = (n) => {
+	  if (n < 1) {
+	    return false
+	  }
+	  while (n > 1) {
+	    if (n % 2 !== 0) {
+	      return false
+	    }
+	    n = n / 2
+	  }
+	  return true
+	}
+    
 
