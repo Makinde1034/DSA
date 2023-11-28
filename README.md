@@ -658,17 +658,17 @@ Make sure the function is case insensitive!
     }
 
 ### 21 Is prime number
-const isPrime = (n) => {
-  if (n  < 2) {
-    return false
-  }
-
-  if (n % 2 == 0) {
-    return false
-  }
-
-  return true
-}
+    const isPrime = (n) => {
+      if (n  < 2) {
+        return false
+      }
+    
+      if (n % 2 == 0) {
+        return false
+      }
+    
+      return true
+    }
 
 
 
