@@ -703,4 +703,24 @@ Make sure the function is case insensitive!
 	  return n * recursiveFactorial(n - 1)
 	}
 
+### Recursive binary search
+	 const rbs = (arr, target) => {
+  return search(arr,target,0,arr.length - 1)
+ }
 
+const search = (arr,target,leftIndex,rightIndex) => {
+  if( leftIndex > rightIndex ){
+    return -1
+  }
+
+  let mid = Math.floor((leftIndex + rightIndex) / 2)
+   if( arr[mid] === target){
+     return mid
+   }else if(target  > arr[mid]){
+     return search(arr, target, mid + 1,rightIndex)
+   }else{
+     return  search(arr, target, leftIndex,mid - 1)
+   }
+
+
+}
