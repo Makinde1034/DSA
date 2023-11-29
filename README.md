@@ -696,5 +696,11 @@ Make sure the function is case insensitive!
 	  }
 	  return true
 	}
-    
+
+### 23 Recursive Finobacci
+	const recursiveFactorial = (n) => {
+	  if (n < 1) return 1
+	  return n * recursiveFactorial(n - 1)
+	}
+
 
