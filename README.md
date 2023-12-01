@@ -766,3 +766,13 @@ const search = (arr,target,leftIndex,rightIndex) => {
 	  return [...sortedArr, ...left, ...right]
 	}
 
+ ### Climbing stairs
+	  const climbingStairs = (n) => {
+	 	const numberOfWays = [1,2]
+	  for (let i = 2; i < n; i++){
+	  	numberOfWays[i] = numberOfWays[ i - 2 ] + numberOfWays[ i - 1]
+	  }
+	  
+	  return numberOfWays[n - 1]
+	 }
+
