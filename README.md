@@ -776,3 +776,16 @@ const search = (arr,target,leftIndex,rightIndex) => {
 	  return numberOfWays[n - 1]
 	 }
 
+
+### Two sums
+	const twoSums = (arr,target) => {
+	let storage = {}
+	  
+	  for (let i = 0; i < arr.length; i++){
+	  	if(storage[arr[i]] !== undefined){
+	    	return [ storage[arr[i]], i ]
+	    }
+	    storage[target - arr[i]] = i
+	  }
+	}
+
