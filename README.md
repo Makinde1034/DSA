@@ -790,3 +790,11 @@ const search = (arr,target,leftIndex,rightIndex) => {
 	}
 
 ### Reverse integer with range [-2^31, 2^31 -1] 
+
+	const reverseInteger = (n) => {
+	  if (n < 0) {
+	    return -1 * Number((-1 * n + "").split('').reverse().join(""))
+	  }
+	  const result = Number((n+"").split('').reverse().join(""))
+	  return result > ((2** 31) - 1) ? 0 : result
+	}
