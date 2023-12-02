@@ -697,13 +697,13 @@ Make sure the function is case insensitive!
 	  return true
 	}
 
-### 23 Recursive Finobacci
+### 23. Recursive Finobacci
 	const recursiveFactorial = (n) => {
 	  if (n < 1) return 1
 	  return n * recursiveFactorial(n - 1)
 	}
 
-### Recursive binary search
+### 24. Recursive binary search
 	 const rbs = (arr, target) => {
   return search(arr,target,0,arr.length - 1)
  }
@@ -725,7 +725,7 @@ const search = (arr,target,leftIndex,rightIndex) => {
 
 }
 
-### Quick sort
+### 25. Quick sort
 
 	const quickSort = (arr) => {
 		if(arr.length < 2) return arr
@@ -743,7 +743,7 @@ const search = (arr,target,leftIndex,rightIndex) => {
 	  
 	  return [...quickSort(left),pivot,...quickSort(right)]
 	}
-### Merge sort
+### 26. Merge sort
 	const mergeSort = (arr) => {
 	  if (arr.length < 2) return arr
 	  let mid = Math.floor(arr.length/2),
@@ -766,7 +766,7 @@ const search = (arr,target,leftIndex,rightIndex) => {
 	  return [...sortedArr, ...left, ...right]
 	}
 
- ### Climbing stairs
+ ### 27. Climbing stairs
 	  const climbingStairs = (n) => {
 	 	const numberOfWays = [1,2]
 	  for (let i = 2; i < n; i++){
@@ -777,7 +777,7 @@ const search = (arr,target,leftIndex,rightIndex) => {
 	 }
 
 
-### Two sums
+### 28. Two sums
 	const twoSums = (arr,target) => {
 	let storage = {}
 	  
