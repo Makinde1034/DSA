@@ -799,21 +799,3 @@ const search = (arr,target,leftIndex,rightIndex) => {
 	  return result > ((2** 31) - 1) ? 0 : result
 	}
 
-### 30. Longest palindrome in a string.
-	const longestPalindrome = (str) => {
-	  let longest = ''
-	  for (let i = 0; i < str.length; i++) {
-	    for (let j = i + 1; j < str.length; j++) {
-	      //Get mirror
-	      if (str[i] === str[j]) {
-	        let temp = str.slice(i, j + 1)
-	        let reversedTemp = temp.split('').reverse().join('')
-	        if (temp === reversedTemp && temp.length > longest.length) {
-	          longest = temp 
-	        }
-	      }
-	    }
-	
-	  }
-	  return longest
-	}
