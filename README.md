@@ -789,7 +789,7 @@ const search = (arr,target,leftIndex,rightIndex) => {
 	  }
 	}
 
-### Reverse integer with range [-2^31, 2^31 -1] 
+### 29. Reverse integer with range [-2^31, 2^31 -1] 
 
 	const reverseInteger = (n) => {
 	  if (n < 0) {
