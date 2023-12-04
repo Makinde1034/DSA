@@ -813,3 +813,17 @@ const search = (arr,target,leftIndex,rightIndex) => {
 	  
 	  return satisfied
 	}
+
+ ### 31. Maximum subarray
+ 	const longestSubarray = (arr) => {
+	let solution = arr[0]
+  
+	  for (let i = 1; i < arr.length; i++){
+	  console.log(solution)
+	  	arr[i] = Math.max(arr[i], arr[i] + arr[i - 1]);
+	    solution = Math.max(solution,arr[i])
+	    
+	    
+	  }
+	  return solution
+	}
