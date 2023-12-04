@@ -799,3 +799,17 @@ const search = (arr,target,leftIndex,rightIndex) => {
 	  return result > ((2** 31) - 1) ? 0 : result
 	}
 
+### 30. Assign cookies
+	const assignCookies = (g,s) => {
+	let satisfied = 0
+	s.sort((a,b)=> a - b)
+	  g.sort((a,b)=> a-b)
+	  
+	  for ( let i = 0; i < s.length; i++ ){
+	  	if( s[i] >= g[i] ){
+	    	satisfied++
+	    }
+	  }
+	  
+	  return satisfied
+	}
