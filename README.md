@@ -827,3 +827,23 @@ const search = (arr,target,leftIndex,rightIndex) => {
 	  }
 	  return solution
 	}
+
+
+### 32. Find minimum in rotated sorted array.
+	const minimumRotatedSortedArray = (arr)=> {
+	  let left = 0,
+	    right = arr.length - 1
+	   
+	
+	  while (left < right){
+	    let mid = Math.floor((left+right)/2)
+	   
+	    if(arr[mid] > arr[right]){
+	      left = mid+1
+	    }else{
+	      right = mid
+	    }
+	  }
+	
+	  return arr[right]
+	}
