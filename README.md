@@ -23,6 +23,12 @@
 
 
     }
+
+    OR
+
+    const isPalindrom = (n) => {
+	  return Number((n+"").split('').reverse().join('')) === n
+	}
     
 ### 2. Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
 
