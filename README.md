@@ -72,13 +72,9 @@
 
     A word is a maximal substring consisting of non-space characters only.
 
-    var lengthOfLastWord = function(word) {
-        const sw = word.split(" ")
-        const fil = sw.filter((i => i !== ""));
-        const lastWord = fil[fil.length - 1].length;
-
-        return lastWord; 
-    };
+    const lengthOflastWord = (n) => {
+	  return n.split(' ')[n.split(' ').length - 1].length
+     }
 
 ### 5. Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 
