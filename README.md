@@ -254,7 +254,9 @@ Make sure the function is case insensitive!
 	
 	  return count
 	}
-	### Sorting algorithms 
+
+ 
+### Sorting algorithms 
 
     // sorting algorithm (Bubble sort)
 
