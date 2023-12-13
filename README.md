@@ -241,7 +241,19 @@ Make sure the function is case insensitive!
           }
           console.log(total)
         }
-        
+  solution 2
+
+  const numberOfVowels = (s) => {
+	  const vowels =  ['a','e','i','o','u']
+	  let count = 0
+	  for (let i = 0; i < s.length; i++){
+	    if(vowels.includes(s[i].toLowerCase())){
+	      count++
+	    }
+  }
+
+  return count
+}
 ### Sorting algorithms 
 
     // sorting algorithm (Bubble sort)
@@ -843,3 +855,5 @@ const search = (arr,target,leftIndex,rightIndex) => {
 	
 	  return arr[right]
 	}
+
+ ### 33. 
