@@ -867,7 +867,7 @@ const search = (arr,target,leftIndex,rightIndex) => {
 
 ###. Roman to integer
 
-`
+```
 /**
  * @param {string} s
  * @return {number}
@@ -897,4 +897,4 @@ var romanToInt = function(s) {
     return total
     
 };
-`
+```
