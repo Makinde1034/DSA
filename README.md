@@ -899,3 +899,30 @@ var romanToInt = function(s) {
     
 };
 ```
+
+### 35. Longest common prefix
+
+```
+function longestCommonPrefix(strs) {
+    if (strs.length === 0) return "";
+
+    // Start with the prefix being the first string
+    let prefix = strs[0];
+
+    // Compare the prefix with each string in the array
+    for (let i = 1; i < strs.length; i++) {
+        // Check the current string against the prefix
+        while (strs[i].indexOf(prefix) !== 0) {
+            // Reduce the prefix by one character from the end
+            prefix = prefix.slice(0, prefix.length - 1);
+            // If the prefix is reduced to an empty string, return ""
+            if (prefix === "") return "";
+        }
+    }
+
+    return prefix;
+}
+
+
+
+```
