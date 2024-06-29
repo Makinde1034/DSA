@@ -862,3 +862,37 @@ const search = (arr,target,leftIndex,rightIndex) => {
 
  React test
  https://codesandbox.io/p/sandbox/messages-forked-mnfm3z?file=%2Fsrc%2FuseWithMessages.js%3A55%2C7
+
+
+
+###. Roman to integer
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var romanToInt = function(s) {
+    const romanToValue = {
+        I : 1,
+        V : 5,
+        X : 10,
+        L : 50,
+        C : 100,
+        D : 500,
+        M : 1000
+    }
+
+
+    let total = 0
+
+    for (let i = 0; i < s.length; i++){
+        if(romanToValue[s[i]] < romanToValue[s[i+1]]){
+            total -= romanToValue[s[i]]
+        }else{
+            total += romanToValue[s[i]]
+        }
+    }
+
+    return total
+    
+};
