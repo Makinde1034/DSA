@@ -926,3 +926,31 @@ function longestCommonPrefix(strs) {
 
 
 ```
+
+### 36. Valid parenthesis
+
+```
+var isValid = function(s) {
+
+    let stack = []
+
+    const bracketsToEnd = {
+        ')': '(',
+        '}': '{',
+        ']': '['
+    };
+
+    for (char of s){
+        // check if item is a closing element . e.g ),],}
+        if(char in bracketsToEnd ){
+            // store end of stack temporarily
+            const topElement = stack.pop()
+            if(topElement !== bracketsToEnd[char]) return false
+        }else{
+            stack.push(char)
+        }
+    }
+
+    return stack.length === 0
+};
+`
