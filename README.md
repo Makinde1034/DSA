@@ -953,4 +953,26 @@ var isValid = function(s) {
 
     return stack.length === 0
 };
-`
+```
+
+### 37. Max profit
+```
+ar maxProfit = function(prices) {
+    let minPrice = Infinity,
+        maxProf = 0
+
+    for (let i = 0; i < prices.length; i++) {
+        if (prices[i] < minPrice) {
+            minPrice = prices[i]
+        }else{
+           const profit =  prices[i] - minPrice
+
+            if(profit > maxProf){
+                maxProf = profit
+            }
+        }
+    }
+
+    return maxProf
+};
+```
