@@ -994,3 +994,23 @@ ar maxProfit = function(prices) {
     return maxGlobal
 };
 ```
+
+### 39. First unique character in string
+
+```
+var firstUniqChar = function(s) {
+    let store = {}
+
+    for (let i = 0; i < s.length; i++){
+        store[s[i]] = store[s[i]] ? store[s[i]] + 1 : 1
+    }
+
+    for (let i = 0; i < s.length; i++){
+        if(store[s[i]] === 1){
+            return i
+        }
+    }
+
+    return -1
+};
+```
