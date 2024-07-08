@@ -1014,3 +1014,25 @@ var firstUniqChar = function(s) {
     return -1
 };
 ```
+
+### 40. Group anagrams
+```
+const groupAnagrams = (s) => {
+    let groups = {
+
+    }
+
+    for(let i = 0; i < s.length; i++){
+        const key = s[i].split('').sort().join('')
+        if(key in groups){
+            groups[key].push(s[i])
+        }else{
+            groups[key] = [s[i]]
+        }
+    }
+
+   
+
+    return Object.values(groups)
+}
+```
