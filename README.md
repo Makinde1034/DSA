@@ -1036,3 +1036,75 @@ const groupAnagrams = (s) => {
     return Object.values(groups)
 }
 ```
+
+### 41. Reactjs Letter Tile (Coderbyte_ 
+![alt text](https://media.studyx.ai/us/6bad6d39/be60b276de0d48c4b9580ccda1e7a439.jpg)
+
+```
+import React, { useState } from 'react';
+import { createRoot } from 'react-dom/client';
+
+const style = {
+  letterContainer: {
+    overflow: 'auto',
+    marginBottom: '10px'
+  },
+  letter: {
+    float: 'left',
+    padding: '10px 10px',
+    background: '#c9e4ed',
+    borderRadius: '5px',
+    marginRight: '5px',
+    cursor: 'pointer'
+  }
+};
+
+function Tile(props) {
+  return (
+    <button onClick={() => {
+      props.onClick(props.letter)
+    }}  style={style.letter}>{ props.letter }</button>
+  );
+}
+
+function App(props) {
+
+  const [letters,setLetters] = useState('')
+
+  const alph = Array.from({ length: 26 }, (_, i) =>
+    String.fromCharCode(65 + i)
+  );
+
+  const handleClick = (l) => {
+
+    const a = letters[letters.length - 2]
+    const b = letters[letters.length - 1]
+
+    if (l == a && l == b) {
+      const p = letters.slice(0, letters.length - 2)
+        setLetters(p+"_")
+    } else {
+       setLetters(letters + l)
+    }
+  
+   
+  }
+
+  return (
+    <section>
+      <aside style={style.letterContainer} id="letterContainer">
+        {
+          alph.map((item, index) => (
+            <Tile letter={item} onClick={(e) => {
+              handleClick(e)
+            }}  />
+          ))
+       }
+      </aside>
+      <div id="outputString">{letters}</div>
+    </section>
+  );
+}
+
+export default App
+```
