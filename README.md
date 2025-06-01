@@ -1202,4 +1202,12 @@ var searchInsert = function(nums, target) {
 };
 ```
 
+### 45 Length of last word (L58)
 
+```
+var lengthOfLastWord = function(word) {
+    const w = word.trim().split(" ")
+   const l = w[w.length - 1]
+   return l.length
+};
+```
