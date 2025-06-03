@@ -1212,7 +1212,7 @@ var lengthOfLastWord = function(word) {
 };
 ```
 
-### 46 83. Remove Duplicates from Sorted List
+### 46  Remove Duplicates from Sorted List
 ```
 /**
  * Definition for singly-linked list.
@@ -1237,4 +1237,25 @@ var deleteDuplicates = function(head) {
     }
     return head
 };
+```
+
+### 47 Isomorphic strings
+
+```
+const isIsomorphic = (s, l) => {
+  let str1 = {}
+  let str2 = {}
+  
+  if(s.length !== l.length) return false
+
+  for (let i = 0; i <= s.length - 1; i++) {
+    if (str1[s[i]] && str1[s[i]] !== l[i]) return false
+    if (str2[l[i]] && str2[l[i]] !== s[i]) return false
+
+    str1[s[i]] = l[i]
+    str2[l[i]] = s[i]
+  }
+  
+  return true
+}
 ```
