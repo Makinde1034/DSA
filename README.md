@@ -1259,3 +1259,30 @@ const isIsomorphic = (s, l) => {
   return true
 }
 ```
+
+
+### 48 Word pattern
+
+```
+var wordPattern = function (pattern, s) {
+    const wordToPattern = new Map()
+    const patternToWord = new Map()
+    const splittedWord = s.split(" ")
+
+    if (pattern.length !== splittedWord.length) return false
+
+    for (let i = 0; i < pattern.length; i++) {
+        const word = splittedWord[i]
+        const char = pattern[i]
+
+        if (wordToPattern.has(word) && wordToPattern.get(word) !== char) return false
+        if (patternToWord.has(char) && patternToWord.get(char) !== word) return false
+
+        wordToPattern.set(word, char)
+        patternToWord.set(char, word)
+    }
+
+    return true
+
+};
+```
