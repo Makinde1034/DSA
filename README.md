@@ -1298,3 +1298,28 @@ var reverseString = function(s) {
     s.reverse()
 };
 ```
+
+### 50 Best time to buy and sell stock
+```
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+var maxProfit = function (prices) {
+    let maxProf = 0
+    let minPrice = Infinity
+
+    for (let i = 0; i <= prices.length; i++) {
+        if (prices[i] < minPrice) {
+            minPrice = prices[i]
+        } else {
+            const prof = prices[i] - minPrice
+            if (prof > maxProf) {
+                maxProf = prof
+            }
+        }
+    }
+
+    return maxProf
+};
+```
