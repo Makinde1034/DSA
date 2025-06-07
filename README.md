@@ -1361,3 +1361,21 @@ var findContentChildren = function (g, s) {
     return child
 };
 ```
+
+### 53 Maximum Units on a Truck
+
+```
+var maximumUnits = function(boxTypes, truckSize) {
+
+    boxTypes.sort((a,b)=> b[1] - a[1])
+    let maxUnitsToTake = 0
+
+    for (let i = 0; i < boxTypes.length; i++){
+        const toTake = Math.min(truckSize,boxTypes[i][0])
+        maxUnitsToTake += toTake * boxTypes[i][1]
+        truckSize -= toTake
+    }
+
+    return maxUnitsToTake
+};
+```
