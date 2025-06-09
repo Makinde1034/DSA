@@ -1406,3 +1406,40 @@ var longestPalindrome = function (s) {
 };
 
 ```
+
+### 55 Lemonade Change
+```
+var lemonadeChange = function(bills) {
+    let five = 0
+    let ten = 0
+
+    for (let i = 0; i < bills.length; i++){
+        const present = bills[i]
+        if(present === 5){
+            five++
+        }
+
+        if(present === 10){
+            if(five >= 1){
+                five--
+                ten++
+            }else{
+                return false
+            }
+        }
+
+        if(present === 20){
+            if(five >= 1 && ten >= 1){
+               five--
+                ten-- 
+            }else if(five >= 3){
+                five -= 3
+            }else{
+                return false
+            }
+        }
+    }
+
+    return true
+};
+```
