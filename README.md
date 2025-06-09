@@ -1379,3 +1379,30 @@ var maximumUnits = function(boxTypes, truckSize) {
     return maxUnitsToTake
 };
 ```
+
+### 54 Longest palindrome
+
+```
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var longestPalindrome = function (s) {
+    let map = {}
+    let count = 0
+
+    for (i = 0; i < s.length; i++) {
+        if (map[s[i]]) {
+            map[s[i]] = map[s[i]] + 1
+            if (map[s[i]] % 2 === 0) {
+                count += 2
+            }
+        } else {
+            map[s[i]] = 1
+        }
+    }
+
+    return s.length > count ? count + 1 : count
+};
+
+```
