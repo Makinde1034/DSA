@@ -1480,3 +1480,33 @@ var containsNearbyDuplicate = function(nums, k) {
     return false
 };
 ```
+
+### 58 Longest Harmonious Subsequence
+
+```
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findLHS = function (nums) {
+    let map = {}
+    let count = 0
+
+    for (let i = 0; i < nums.length; i++) {
+        if (map[nums[i]]) {
+            map[nums[i]] = map[nums[i]] + 1
+        } else {
+            map[nums[i]] = 1
+        }
+    }
+
+    for (i in map) {
+        const num = Number(i)
+        if (map[num + 1]) {
+            count = Math.max(count, map[num + 1] + map[num])
+        }
+    }
+
+    return count
+};
+```
