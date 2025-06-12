@@ -1510,3 +1510,26 @@ var findLHS = function (nums) {
     return count
 };
 ```
+
+### 59  Maximum Average Subarray I
+```
+const findMaxAverage = (nums,k) => {
+	let maxAvg = -Infinity
+  
+  let left = 0
+  let right = 0
+  let sum = 0
+  
+  while(right < nums.length ){
+  	sum += nums[right]
+  	if(right - left == k - 1){
+    	maxAvg = Math.max(maxAvg,sum / k)
+      sum = sum - nums[left] 
+      left++
+    
+    }
+    right++
+  }
+  return maxAvg
+}
+```
