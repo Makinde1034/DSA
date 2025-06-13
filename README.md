@@ -1560,3 +1560,30 @@ var countGoodSubstrings = function (s) {
     return counter
 };
 ```
+
+### 61 Find the K-Beauty of a Number
+
+```
+var divisorSubstrings = function (num, k) {
+    let left = 0
+    let right = 0
+    let count = 0
+    const convertedNum = String(num)
+    let str = ""
+
+    while (right < convertedNum.length) {
+        if (right - left == k - 1) {
+            const str = convertedNum.slice(left, right + 1)
+
+            if (num % Number(str) === 0) {
+                count++
+            }
+            left++
+        }
+
+        right++
+    }
+
+    return count
+};
+```
