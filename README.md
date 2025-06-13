@@ -1533,3 +1533,30 @@ const findMaxAverage = (nums,k) => {
   return maxAvg
 }
 ```
+
+### 60 Substrings of Size Three with Distinct Characters
+
+```
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var countGoodSubstrings = function (s) {
+    let left = 0
+    let right = 0
+    let counter = 0
+
+    while(right < s.length){
+        if(right - left == 2){
+            let set = new Set([s[left],s[left + 1], s[left + 2]])
+            if(set.size === 3){
+                counter++
+            }
+            left++
+        }
+
+        right++
+    }
+    return counter
+};
+```
