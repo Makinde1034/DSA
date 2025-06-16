@@ -1587,3 +1587,32 @@ var divisorSubstrings = function (num, k) {
     return count
 };
 ```
+
+### 62 Binary Tree Path
+```
+
+var binaryTreePaths = function(root) {
+    let result = []
+
+    const dfs = (path, node) => {
+        if(!node) return
+
+        path +=  node.val
+
+        if(!node.left && !node.right){
+            result.push(path)
+            return
+        }
+
+        path += '->'
+
+        dfs(path, node.left)
+        dfs(path,node.right)
+
+    }
+
+    dfs('',root)
+
+    return result
+};
+```
