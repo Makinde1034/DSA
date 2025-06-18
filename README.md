@@ -1616,3 +1616,14 @@ var binaryTreePaths = function(root) {
     return result
 };
 ```
+
+### 63 Same Tree
+```
+var isSameTree = function(p, q) {
+    if (!p && !q) return true;            // both null
+    if (!p || !q) return false;           // one is null
+    if (p.val !== q.val) return false;    // values don't match
+
+    return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+};
+```
