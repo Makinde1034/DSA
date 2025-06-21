@@ -1648,3 +1648,31 @@ var isSymmetric = function(root) {
     return isMirror(root.left, root.right)
 };
 ```
+
+### Find the difference
+```
+var findTheDifference = function(s, t) {
+    let map = {}
+    for (let i = 0; i < t.length; i++){
+        if(map[t[i]]){
+            map[t[i]] = map[t[i]] + 1
+        }else{
+            map[t[i]] = 1
+        }
+    }
+
+    for(let i = 0; i < s.length; i++){
+        if(map[s[i]]){
+            map[s[i]] = map[s[i]] - 1
+        }
+    }
+   
+
+    for(let i in map){
+
+        if(map[i] === 1){
+            return i
+        }
+    }
+};
+```
