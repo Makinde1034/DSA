@@ -1676,3 +1676,13 @@ var findTheDifference = function(s, t) {
     }
 };
 ```
+
+### 66 Repeated substring pattern
+```
+var repeatedSubstringPattern = function(s) {
+    let double = s + s
+    const slicedDouble = double.slice(1,-1)
+
+    return slicedDouble.includes(s)
+};
+```
