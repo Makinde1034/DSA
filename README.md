@@ -1686,3 +1686,10 @@ var repeatedSubstringPattern = function(s) {
     return slicedDouble.includes(s)
 };
 ```
+
+### Detect capital
+```
+var detectCapitalUse = function(word) {
+    return word === word.toLowerCase() || word === word.toUpperCase() || word[0] === word[0].toUpperCase() && word.slice(1) === word.slice(1).toLowerCase()
+};
+```
