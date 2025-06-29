@@ -1717,3 +1717,29 @@ var isValid = function(s) {
     return stack.length === 0;
 };
 ```
+
+### 69 Ransom Note
+```
+var canConstruct = function(ransomNote, magazine) {
+    let map = {}
+
+    for (let i = 0; i < magazine.length; i++){
+        if(map[magazine[i]]){
+            map[magazine[i]] = map[magazine[i]] + 1
+        }else{
+            map[magazine[i]] = 1
+        }
+    }
+
+    for(i = 0; i < ransomNote.length; i++){
+        if(map[ransomNote[i]]){
+            map[ransomNote[i]] = map[ransomNote[i]] - 1
+        }else{
+            return false
+        }
+        
+    }
+
+    return true
+};
+```
