@@ -1687,9 +1687,33 @@ var repeatedSubstringPattern = function(s) {
 };
 ```
 
-### Detect capital
+### 67 Detect capital
 ```
 var detectCapitalUse = function(word) {
     return word === word.toLowerCase() || word === word.toUpperCase() || word[0] === word[0].toUpperCase() && word.slice(1) === word.slice(1).toLowerCase()
+};
+```
+
+### 68 Valid Parenthesis
+```
+var isValid = function(s) {
+    const stack = [];
+    const map = {
+        ')': '(',
+        '}': '{',
+        ']': '['
+    };
+
+    for (let char of s) {
+        if (char === '(' || char === '{' || char === '[') {
+            stack.push(char);
+        } else {
+            if (stack.pop() !== map[char]) {
+                return false;
+            }
+        }
+    }
+
+    return stack.length === 0;
 };
 ```
