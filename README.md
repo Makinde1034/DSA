@@ -1743,3 +1743,22 @@ var canConstruct = function(ransomNote, magazine) {
     return true
 };
 ```
+
+### 70 Reverse words in a string
+```
+var reverseWords = function(s) {
+
+    const splittedWords = s.split(' ')
+    let wrd = ''
+
+    for(let i = splittedWords.length - 1; i >= 0; i-- ){
+    
+        if(splittedWords[i] !== ""){
+             wrd +=` ${splittedWords[i]}` 
+        }
+       
+    }
+
+    return wrd.trim()
+}
+```
